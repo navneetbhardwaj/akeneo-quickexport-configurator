@@ -1,0 +1,4 @@
+wk_quickexport_fetch_wk_modules_action:
+    path: wk_quickexport/wk_moduels
+    defaults: { _controller: webkul.quickexport.controller.rest:getWkModules }
+    methods: [GET]

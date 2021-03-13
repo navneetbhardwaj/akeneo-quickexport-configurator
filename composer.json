@@ -1,0 +1,38 @@
+{
+  "name": "navneetbhardwaj/akeneo-quickexport-configurator",
+  "type": "symfony-bundle",
+  "description": "quick export configurator for Akeneo 5",
+  "version": "1.0.0",
+  "license": "OSL-3.0",
+  "authors": [
+    {
+      "name": "Navneet Kumar",
+      "homepage": "https://www.webkul.com"
+    }
+  ],
+  "require": {
+    "akeneo/pim-community-dev": "^5.0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9",
+    "phpstan/phpstan": "^0.12.68",
+    "friendsofphp/php-cs-fixer": "^2.18"
+  },
+  "autoload": {
+    "psr-4": {
+      "Webkul\\QuickExportConfiguratorBundle": "src/"
+    }
+  },
+  "scripts": {    
+    "phpunit": [
+      "vendor/bin/phpunit --colors=always"
+    ],
+    "test": [
+      "vendor/bin/php-cs-fixer fix --dry-run",
+      "@phpunit"
+    ],
+    "cs:fix": [
+      "vendor/bin/php-cs-fixer fix"
+    ]
+  }
+}

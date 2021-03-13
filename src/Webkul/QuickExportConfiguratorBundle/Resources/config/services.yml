@@ -1,0 +1,10 @@
+services:
+    wk_quick_export.registry.bundles:
+        class: Webkul\QuickExportConfiguratorBundle\Component\QuickExportBundleRegistry
+        public: true 
+
+    webkul.quickexport.controller.rest:
+        class: Webkul\QuickExportConfiguratorBundle\Controller\Rest\QuickExportWkModules
+        public: true
+        arguments:
+            - '@wk_quick_export.registry.bundles'

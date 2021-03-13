@@ -1,0 +1,17 @@
+config:         
+    paths:
+        oro/datagrid/actions-panel: quickexportconfigurator/js/datagrid/actions-panel
+        pimdatagrid/datagrid/quickexport/component/QuickExportConfigurator: quickexportconfigurator/js/datagrid/quickexport/component/QuickExportConfigurator.tsx
+        pimdatagrid/datagrid/quickexport/component/Form: pimdatagrid/js/datagrid/quickexport/component/Form.tsx
+        pimdatagrid/datagrid/quickexport/component/Select: pimdatagrid/js/datagrid/quickexport/component/Select.tsx
+        pimdatagrid/datagrid/quickexport/component/Option: pimdatagrid/js/datagrid/quickexport/component/Option.tsx
+    config:        
+        pim/fetcher-registry:
+            fetchers:
+                wk_modules_finder:
+                    module: pim/base-fetcher
+                    options:
+                        urls:                            
+                            list: wk_quickexport_fetch_wk_modules_action
+
+                 
