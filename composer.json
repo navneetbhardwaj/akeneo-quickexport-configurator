@@ -20,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Webkul\\QuickExportConfiguratorBundle": "src/"
+      "Webkul\\QuickExportConfiguratorBundle\\": "src/"
     }
   },
   "scripts": {    
