@@ -25,7 +25,7 @@ const QuickExportConfigurator = ({
   const [formValue, setFormValue] = useStorageState<FormValue>({}, 'quick_export_configuration');
 
   const productCount = getProductCount();
-console.log(modulesOptions)
+
   const readyToSubmit =
     undefined !== formValue.type &&
     undefined !== formValue.context &&

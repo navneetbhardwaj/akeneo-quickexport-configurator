@@ -37,7 +37,37 @@ yarn run webpack;
 yarnpkg run update-extensions;
 yarnpkg run less;
 ```
-
+### How to configure quick export in your module:
+1. create an action in the file Resources/config/datagrid/quickexport.yml
+```dotenv
+datagrid:
+    product-grid:
+        mass_actions:
+            quick_export_grid_context_connector: 
+                type: export
+                label: pim.grid.mass_action.quick_export.connector
+                handler: product_quick_export
+                route: pim_datagrid_export_product_index
+                route_parameters:                   
+                    _format: html
+                    _contentType: text/html
+                    _jobCode: connector_product_quick_export
+                    _displayedColumnsOnly: 0
+                context:
+                    withHeader: true
+                messages:
+                    empty_selection: pim_datagrid.mass_action.delete.empty_selection
+                launcherOptions:
+                    group: quick_export
+```
+2. create a service in the file Resources/config/services.yml
+```dotenv
+services:
+    quick_export_connector:
+        class: Webkul\AcmeBundle\Acme2Bundle
+        tags:
+            - { name: wk_quick_export_register }
+```
 ### Features:
 
 With Akeneo Quick Export Configurator developer can add quick export job option in the akeneo 5 easily.  
