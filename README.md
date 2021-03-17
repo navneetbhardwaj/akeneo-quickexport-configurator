@@ -39,11 +39,28 @@ yarnpkg run less;
 ```
 ### How to configure quick export in your module:
 1. create an action in the file Resources/config/datagrid/quickexport.yml
+e.g replace quick_export_connectorname with your bundle name like quick_export_magento2 
 ```dotenv
 datagrid:
     product-grid:
         mass_actions:
-            quick_export_grid_context_connector: 
+            quick_export_connectorname: 
+                type: export
+                label: pim.grid.mass_action.quick_export.connector
+                handler: product_quick_export
+                route: pim_datagrid_export_product_index
+                route_parameters:                   
+                    _format: html
+                    _contentType: text/html
+                    _jobCode: connector_product_quick_export
+                    _displayedColumnsOnly: 0
+                context:
+                    withHeader: true
+                messages:
+                    empty_selection: pim_datagrid.mass_action.delete.empty_selection
+                launcherOptions:
+                    group: quick_export
+            quick_export_grid_context_connectorname: 
                 type: export
                 label: pim.grid.mass_action.quick_export.connector
                 handler: product_quick_export
@@ -61,6 +78,7 @@ datagrid:
                     group: quick_export
 ```
 2. create a service in the file Resources/config/services.yml
+e.g Replace AcmeBundle with your bundle name like Webkul\Magento2Bundle\Magento2Bundle
 ```dotenv
 services:
     quick_export_connector:
