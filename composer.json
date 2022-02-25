@@ -2,7 +2,7 @@
   "name": "navneetbhardwaj/akeneo-quickexport-configurator",
   "type": "symfony-bundle",
   "description": "quick export configurator for Akeneo 5",
-  "version": "1.0.0",
+  "version": "1.1.2",
   "license": "OSL-3.0",
   "authors": [
     {
