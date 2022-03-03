@@ -2,11 +2,10 @@
 
 namespace Webkul\QuickExportConfiguratorBundle\Controller\Rest;
 
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Webkul\QuickExportConfiguratorBundle\Component\QuickExportBundleRegistry;
 
-class QuickExportWkModules extends Controller
+class QuickExportWkModules
 {
     protected $quickExportBundleRegistry;
 
