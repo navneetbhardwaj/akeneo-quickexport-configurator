@@ -116,6 +116,19 @@ const QuickExportConfigurator = ({
                 </Option>
               </Select>
             )}
+            {showWithMediaSelect && (
+              <Select name="with_uuid">
+                <Option
+                  value="false"
+                  title={translate('pim_datagrid.mass_action.quick_export.configurator.without_uuid')}
+                >
+                  {translate('pim_datagrid.mass_action.quick_export.configurator.without_uuid')}
+                </Option>
+                <Option value="true" title={translate('pim_datagrid.mass_action.quick_export.configurator.with_uuid')}>
+                  {translate('pim_datagrid.mass_action.quick_export.configurator.with_uuid')}
+                </Option>
+              </Select>
+            )}
           </Form>
         </Modal>
       )}
