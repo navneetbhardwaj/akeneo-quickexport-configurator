@@ -1,0 +1,7 @@
+Akeneo Quick Export Configurator
+
+The Open Software License version 3.0
+
+Copyright (c) Navneet Bhardwaj.
+
+Full license is at: http://opensource.org/licenses/OSL-3.0
